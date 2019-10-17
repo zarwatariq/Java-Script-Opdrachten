@@ -1,0 +1,16 @@
+
+crock1,crock2,crock3.addEventListener("click", function() {
+crock1.style.backgroundImage = "url('image/eyes.baby" + getbaby() + ".png')";
+crock2.style.backgroundImage = "url('image/neus.baby" + getbaby() + ".png')";
+crock3.style.backgroundImage = "url('image/mouth.baby" + getbaby() + ".png')";
+});
+
+function getbaby() {
+if (teller >= plaatjes.length){
+teller = 1;
+} else {
+teller++;
+}
+teller++;
+console.log(teller);
+return teller;

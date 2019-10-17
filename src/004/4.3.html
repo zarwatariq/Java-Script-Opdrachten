@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <title>crock slider</title>
+            <style>
+                #crock1 {
+                    height:250px;
+                    width: 250px;
+                    border: 1px solid wheat;
+                }
+                #crock2 {
+                    height:100px;
+                    width: 250px;
+                    border: 1px solid wheat;
+                }
+                #crock3 {
+                    height:100px;
+                    width: 250px;
+                    border: 1px solid wheat;
+                }
+            </style>
+        </head>
+
+        <body>
+            <div id="crock1"></div>
+            <div id="crock2"></div>
+            <div id="crock3"></div>
+            <script>
+
+                var plaatjes = [1,2,3];
+                var teller = 0;
+
+                var crock1 = document.getElementById("crock1");
+                var crock2 = document.getElementById("crock2");
+                var crock3 = document.getElementById("crock3");
+
+                crock1.style.backgroundImage = "url('image/eyes.baby1.png')";
+                crock1.style.backgroundSize = "cover";
+                crock1.style.backgroundPosition = "center";
+
+
+                crock2.style.backgroundImage = "url('image/neus.baby1.png')";
+                crock2.style.backgroundSize = "initial";
+                crock2.style.backgroundPosition = "center";
+
+                crock3.style.backgroundImage = "url('image/mouth.baby1.png')";
+                crock3.style.backgroundSize = "cover";
+                crock3.style.backgroundPosition = "center";
+
+                crock1,crock2,crock3.addEventListener("click", function() {
+                    crock1.style.backgroundImage = "url('image/eyes.baby" + getbaby() + ".png')";
+                    crock2.style.backgroundImage = "url('image/neus.baby" + getbaby() + ".png')";
+                    crock3.style.backgroundImage = "url('image/mouth.baby" + getbaby() + ".png')";
+                });
+
+                function getbaby() {
+                    if (teller >= plaatjes.length){
+                        teller = 1;
+                    } else {
+                        teller++;
+                    }
+                    teller++;
+                    console.log(teller);
+                    return teller; }
+
+
+
+
+            </script>
+
+        </body>
+    </html>

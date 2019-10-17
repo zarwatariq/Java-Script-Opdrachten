@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <title>Kitten Shuffle</title>
+            <link href="https://fonts.googleapis.com/css?family=Mansalva&display=swap" rel="stylesheet">
+            <style>
+                html {
+                    margin: 0 0 0 0;
+                    padding: 0 0 0 0;
+                }
+                body {
+                    font-family: 'Mansalva', cursive;
+                    text-align: center;
+                }
+                img {
+                    height: 300px;
+                    width: 300px;
+                    border: 0px;
+                }
+                #pics {
+                    width: 900px;
+                    height: 900px;
+                    border: solid 1px black;
+                    font-size: 0px;
+                    margin: auto;
+                }
+            </style>
+        </head>
+
+        <body>
+            <h1>Kitten Shuffle</h1>
+            <div id="pics" />
+                <img src="image/kat1.png" />
+                <img src="image/kat2.jpg" />
+                <img src="image/kat3.jpg" />
+                <img src="image/kat4.jpg" />
+                <img src="image/kat5.jpg" />
+                <img src="image/kat6.webp" />
+                <img src="image/kat7.jpg" />
+                <img src="image/kat8.jpg" />
+                <img src="image/kat9.jpg" />
+
+
+            <script>
+                var plaatjes = document.getElementsByTagName("img");
+                var random = 0;
+
+                var randomNumbers = [];
+
+                while (randomNumbers.length < 9) {
+                    random = Math.floor(Math.random()*9) + 1;
+                    if(randomNumbers.lastIndexOf(random)== -1) {
+                        randomNumbers.push(random);
+                    }
+                }
+                random= 0;
+                    for (var plaatje in plaatjes) {
+                    plaatjes[plaatje].src = "img/kat" + randomNumbers [random] + ".jpg";
+                    random ++;
+                }
+
+ /*               for (var i=0; i= plaatjes.length; i++) {
+                    ramdom = Math.floor(Math.random()*9) + 1;
+                    plaatjes [i].src = "img/kat" + random + ".jpg"
+               }
+*/
+            </script>
+        </body>
+    </html>
