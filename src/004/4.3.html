@@ -5,7 +5,7 @@
             <title>crock slider</title>
             <style>
                 #crock1 {
-                    height:250px;
+                    height:100px;
                     width: 250px;
                     border: 1px solid wheat;
                 }
@@ -41,29 +41,51 @@
 
 
                 crock2.style.backgroundImage = "url('image/neus.baby1.png')";
-                crock2.style.backgroundSize = "initial";
+                crock2.style.backgroundSize = "cover";
                 crock2.style.backgroundPosition = "center";
 
                 crock3.style.backgroundImage = "url('image/mouth.baby1.png')";
                 crock3.style.backgroundSize = "cover";
                 crock3.style.backgroundPosition = "center";
 
-                crock1,crock2,crock3.addEventListener("click", function() {
-                    crock1.style.backgroundImage = "url('image/eyes.baby" + getbaby() + ".png')";
-                    crock2.style.backgroundImage = "url('image/neus.baby" + getbaby() + ".png')";
-                    crock3.style.backgroundImage = "url('image/mouth.baby" + getbaby() + ".png')";
+                crock1.addEventListener("click", function() {
+                    crock1.style.backgroundImage = "url('image/eyes.baby" + getbaby1() + ".png')";
                 });
 
-                function getbaby() {
+                crock2.addEventListener("click", function() {
+                    crock2.style.backgroundImage = "url('image/neus.baby" + getbaby2() + ".png')";
+                });
+
+
+                crock3.addEventListener("click", function() {
+                    crock3.style.backgroundImage = "url('image/mouth.baby" + getbaby3() + ".png')";
+                });
+
+
+                function getbaby1() {
                     if (teller >= plaatjes.length){
-                        teller = 1;
-                    } else {
-                        teller++;
+                        teller = 0;
                     }
                     teller++;
                     console.log(teller);
                     return teller; }
 
+                function getbaby2() {
+                    if (teller >= plaatjes.length){
+                        teller = 0;
+                    }
+                    teller++;
+                    console.log(teller);
+                    return teller; }
+
+
+                function getbaby3() {
+                    if (teller >= plaatjes.length){
+                        teller = 0;
+                    }
+                    teller++;
+                    console.log(teller);
+                    return teller; }
 
 
 
